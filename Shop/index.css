@@ -1,0 +1,99 @@
+
+.nav_links a.active {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: yellowgreen;
+    text-underline-offset: 6px;
+}
+
+
+.navigation {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    transition: 0.5s ease;
+}
+
+
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fffdfd;
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 8px;
+    transition: 0.3s ease;
+}
+
+header .navigation a:hover {
+    position: relative;
+    color: aqua;
+}
+.navigation-items a:hover {
+    transform: scale(1.1);
+}
+.navigation-items a:hover {
+    background-color: #00b944;
+}
+.navigation-items a {
+    transition: transform 0.3s ease;
+}
+.navigation-items a {
+    text-decoration: none;
+    color: #fff9f9;
+    margin: 0 10px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+user agent stylesheet
+a:-webkit-any-link:active {
+    color: -webkit-activelink;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+    background-color: #40abd2;
+}
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: rgb(6, 184, 255);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}

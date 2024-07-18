@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="feedback.css">
+    <script src="https://kit.fontawesome.com/57dc7dc257.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+<header>
+    <a href="index.html" class="brand" id="logo">
+        <img alt="Logo" src="logo.png" width="150" height="150" class="invert-on-hover">
+    </a>
+
+
+    <script>
+        // Get references to the logo, hover image, and hover link elements
+        const logo = document.getElementById("logo");
+        const hoverLink = document.getElementById("hoverLink");
+        const hoverImage = document.getElementById("hoverImage");
+
+        // Add a mouseover event listener to the logo element
+        logo.addEventListener("mouseover", function () {
+            hoverLink.style.display = "block"; // Show the hover link
+            hoverImage.style.display = "block"; // Show the hover image
+        });
+
+        // Add a mouseout event listener to hide the hover link and hover image when the mouse leaves the logo element
+        logo.addEventListener("mouseout", function () {
+            hoverLink.style.display = "none"; // Hide the hover link
+            hoverImage.style.display = "none"; // Hide the hover image
+        });
+
+    </script>
+
+    <!-- Logo -->
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="../Home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="../Gallery/index.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="../Shop/index.html"><i class="fas fa-calendar-plus"></i> Shop</a>
+            <a href="../Team/index.html"><i class="fas fa-info-circle"></i> Team</a>
+            <a href="../Content/Content.html"><i class="fas fa-envelope"></i> content </a>
+            <a href="feedback/feedback.html"><i class="fas fa-envelope"></i> Feedback </a>
+            <a href="../Sitemap/index.html"><i class="fas fa-envelope"></i> Sitemap </a>                     
+            <a href="../Editor/index.html"><i class="fas fa-calendar-plus"></i> Editor</a>
+            <a href="../User Profile/index.html"><i class="fas fa-envelope"></i> User profile</a>
+        </div>
+
+
+
+    </div>
+</header>
+   
+    <div class="feedback-form">
+        <h1><u>Feedback Form</u></h1>
+        <p class="required">Required Fields </p>
+        <form id="feedbackForm" onsubmit="return validateFeedback()">
+
+            <div id="nameError" class="error-message"></div>
+            <label for="feedbackName">1.  Enter your name:</label>
+            <input type="text" id="feedbackName" name="feedbackName" placeholder="Enter your name here" required>
+
+            <div id="emailError" class="error-message"></div>
+            <label for="feedbackEmail">2.  Enter your email:</label>
+            <input type="email" id="feedbackEmail" name="feedbackEmail" placeholder="Enter your email here" required>
+
+            <div id="firstVisitError" class="error-message"></div>
+            <label>3. Was this first time you visiting?</label>
+            <label><input type="radio" name="firstVisit" value="Yes" required>Yes</label>
+            <label><input type="radio" name="firstVisit" value="No" required>No</label>
+
+            <div id="informativeError" class="error-message"></div>
+            <label>4. Was this website informative and easy to navigation trough?</label>
+            <label><input type="radio" name="informative" id="inforYes" value="Yes" required>Yes</label>
+            <label><input type="radio" name="informative" value="No" required>No</label>
+
+            <label>5.  If "No", suggest any improvements for the future:</label>
+            <textarea name="feedbackImprovements" id="feedbackImprovements" placeholder="Add your message here..."></textarea>
+
+            <div id="satisfactionError" class="error-message"></div>
+            <label>6. How satisfied are you with our services? Choose from 0 to 10, with 1 being "Not satisfied at all" and 10 being "Extremely satisfied!"</label>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="satisfaction" value="1" required>1&nbsp;
+            <input type="radio" name="satisfaction" value="2" required>2&nbsp;
+            <input type="radio" name="satisfaction" value="3" required>3&nbsp;
+            <input type="radio" name="satisfaction" value="4" required>4&nbsp;
+            <input type="radio" name="satisfaction" value="5" required>5&nbsp;
+            <input type="radio" name="satisfaction" value="6" required>6&nbsp;
+            <input type="radio" name="satisfaction" value="7" required>7&nbsp;
+            <input type="radio" name="satisfaction" value="8" required>8&nbsp;
+            <input type="radio" name="satisfaction" value="9" required>9&nbsp;
+            <input type="radio" name="satisfaction" value="10" required>10&nbsp;
+
+            <div id="recommendError" class="error-message"></div>
+            <label>Would you recommend our service?</label>
+            <label><input type="radio" name="recommend" value="Yes" required>Yes</label>
+            <label><input type="radio" name="recommend" value="No" required>No</label>
+
+            <label>Would you like to receive updates about offers?</label>
+            <select name="feedbackUpdates" id="feedbackUpdates">
+                <option value="Yes - via Email">Yes - via Email</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Do you have any additional questions or requests?</label>
+            <textarea name="feedbackAdditional" id="feedbackAdditional" placeholder="Add your message here..."></textarea>
+
+            <button type="button" onclick="previewFeedback()">Submit</button>
+            
+        </form>
+
+        <div id="myModal" style="display: none;">
+            <h2>Preview of your Feedback</h2>
+            <div id="modalContent"></div>
+            <button onclick="cancelSubmission()">Cancel</button>
+            <button id="submitConfirmation" onclick="submitFeedback()">Confirm</button>
+        </div>
+
+        <div id="thankYouModal" style="display: none;">
+            <h2>Thank You for Your Feedback!</h2>
+            <button onclick="closeThankYouModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            
+            <ul class="team-names">
+                <li>Chiran</li>
+                <li><a href="Damsara-editor.html"></a>Damsara</li>
+                <li>Devin</li>
+                <li>Oshadha</li>
+            </ul>
+
+           
+
+        <div class="copyright">
+           
+        </div>
+    </footer>
+
+    <script>
+        function validateFeedback() {
+            var feedbackName = document.getElementById("feedbackName").value;
+            var feedbackEmail = document.getElementById("feedbackEmail").value;
+            var feedbackImprovements = document.getElementById("feedbackImprovements").value;
+            var feedbackUpdates = document.getElementById("feedbackUpdates").value;
+
+            if (feedbackName.trim() === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (feedbackEmail.trim() === "") {
+                alert("Email must be filled out");
+                return false;
+            } else {
+                var emailRegex = /\S+@\S+\.\S+/;
+                if (!emailRegex.test(feedbackEmail)) {
+                    alert("Invalid email format");
+                    return false;
+                }
+            }
+
+            if (document.getElementById('inforYes').checked === false && feedbackImprovements.trim() === "") {
+                alert("Please suggest improvements for our website.");
+                return false;
+            }
+
+            if (feedbackUpdates === "") {
+                alert("Please enter how would you like to receive updates.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function adjustImprovementsRequirement() {
+            var feedbackImprovementsInput = document.getElementById("feedbackImprovements");
+            var inforYes = document.getElementById("inforYes");
+
+            if (inforYes.checked) {
+                feedbackImprovementsInput.removeAttribute("required");
+            } else {
+                feedbackImprovementsInput.setAttribute("required", "");
+            }
+        }
+
+        window.onload = function () {
+            adjustImprovementsRequirement();
+        };
+
+        function previewFeedback() {
+            if (validateFeedback()) {
+                var feedbackName = document.getElementById("feedbackName").value;
+                var feedbackEmail = document.getElementById("feedbackEmail").value;
+                var feedbackImprovements = document.getElementById("feedbackImprovements").value;
+                var feedbackRating = document.querySelector('input[name="satisfaction"]:checked').value;
+                var feedbackUpdates = document.getElementById("feedbackUpdates").value;
+                var feedbackRecommend = document.querySelector('input[name="recommend"]:checked').value;
+                var feedbackAdditional = document.getElementById("feedbackAdditional").value;
+
+                var previewMessage = "Name: " + feedbackName + "<br>";
+                previewMessage += "Email: " + feedbackEmail + "<br>";
+                previewMessage += "Improvements you suggested: " + feedbackImprovements + "<br>";
+                previewMessage += "Rating: " + feedbackRating + "<br>";
+                previewMessage += "Updates: " + feedbackUpdates + "<br>";
+                previewMessage += "Recommend: " + feedbackRecommend + "<br>";
+                previewMessage += "Additional comments: " + feedbackAdditional;
+
+                document.getElementById("modalContent").innerHTML = previewMessage;
+                document.getElementById("myModal").style.display = "block";
+                document.getElementById("submitConfirmation").style.display = "block";
+            }
+        }
+
+        function submitFeedback() {
+            alert('Form submitted successfully!!');
+            const form = document.getElementById('feedbackForm');
+            form.reset();
+            document.getElementById("myModal").style.display = "none";
+            document.getElementById("submitConfirmation").style.display = "none";
+            document.getElementById("modalContent").innerHTML = ""; // Clear the preview content
+        }
+
+        function cancelSubmission() {
+            document.getElementById("myModal").style.display = "none";
+            document.getElementById("submitConfirmation").style.display = "none";
+        }
+
+        function closeThankYouModal() {
+            document.getElementById("thankYouModal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

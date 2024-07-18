@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Sitemap</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/57dc7dc257.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+<header>
+    <a href="index.html" class="brand" id="logo">
+        <img alt="Logo" src="logo.png" width="150" height="150" class="invert-on-hover">
+    </a>
+
+
+    <script>
+        // Get references to the logo, hover image, and hover link elements
+        const logo = document.getElementById("logo");
+        const hoverLink = document.getElementById("hoverLink");
+        const hoverImage = document.getElementById("hoverImage");
+
+        // Add a mouseover event listener to the logo element
+        logo.addEventListener("mouseover", function () {
+            hoverLink.style.display = "block"; // Show the hover link
+            hoverImage.style.display = "block"; // Show the hover image
+        });
+
+        // Add a mouseout event listener to hide the hover link and hover image when the mouse leaves the logo element
+        logo.addEventListener("mouseout", function () {
+            hoverLink.style.display = "none"; // Hide the hover link
+            hoverImage.style.display = "none"; // Hide the hover image
+        });
+
+    </script>
+
+    <!-- Logo -->
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="../Home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="../Gallery/index.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="../Shop/index.html"><i class="fas fa-calendar-plus"></i> Shop</a>
+            <a href="../Team/index.html"><i class="fas fa-info-circle"></i> Team</a>
+            <a href="../Content/Content.html"><i class="fas fa-envelope"></i> content </a>
+            <a href="../feedback/feedback.html"><i class="fas fa-envelope"></i> Feedback </a>
+            <a href="Sitemap/index.html"><i class="fas fa-envelope"></i> Sitemap </a>                     
+            <a href="../Editor/index.html"><i class="fas fa-calendar-plus"></i> Editor</a>
+            <a href="../User Profile/index.html"><i class="fas fa-envelope"></i> User profile</a>
+            
+        </div>
+
+
+
+    </div>
+</header>

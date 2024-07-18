@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Content</title>
+    <link rel="stylesheet" href="Content.css">
+    <script src="https://kit.fontawesome.com/57dc7dc257.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+<header>
+    <a href="index.html" class="brand" id="logo">
+        <img alt="Logo" src="logo.png" width="150" height="150" class="invert-on-hover">
+    </a>
+
+
+    <script>
+        // Get references to the logo, hover image, and hover link elements
+        const logo = document.getElementById("logo");
+        const hoverLink = document.getElementById("hoverLink");
+        const hoverImage = document.getElementById("hoverImage");
+
+        // Add a mouseover event listener to the logo element
+        logo.addEventListener("mouseover", function () {
+            hoverLink.style.display = "block"; // Show the hover link
+            hoverImage.style.display = "block"; // Show the hover image
+        });
+
+        // Add a mouseout event listener to hide the hover link and hover image when the mouse leaves the logo element
+        logo.addEventListener("mouseout", function () {
+            hoverLink.style.display = "none"; // Hide the hover link
+            hoverImage.style.display = "none"; // Hide the hover image
+        });
+
+    </script>
+
+    <!-- Logo -->
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="../Home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="../Gallery/index.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="../Shop/index.html"><i class="fas fa-calendar-plus"></i> Shop</a>
+            <a href="../Team/index.html"><i class="fas fa-info-circle"></i> Team</a>
+            <a href="Content/Content.html"><i class="fas fa-envelope"></i> content </a>
+            <a href="../feedback/feedback.html"><i class="fas fa-envelope"></i> Feedback </a>
+            <a href="../Sitemap/index.html"><i class="fas fa-envelope"></i> Sitemap </a>                     
+            <a href="../Editor/index.html"><i class="fas fa-calendar-plus"></i> Editor</a>
+            <a href="../User Profile/index.html"><i class="fas fa-envelope"></i> User profile</a>
+            
+        </div>
+
+
+
+    </div>
+</header>
+
+
+
+
+
+
+<div class="bgimg-2"><a name ="aboutmain"></a>
+    <div class="caption">
+        <span class="border" style="border-radius: 25px;padding: 20px; width: 200px; height: 100px;"> Content </span>
+    </div>
+</div>
+
+
+
+<!--Section 3-->
+<div class="bgimg-4"><a name ="section3"></a>
+    <div class="caption">
+        <span class="border" style="background-color:rgba(78, 78, 78, 0.473);font-size:35px;color: #f7f7f7;font-weight:800;">  <h1>Biodiversity Conservation</h1></span>
+
+    </div>
+</div>
+
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify; font-family: Poppins;">
+        <p class="small_txt"> Biodiversity conservation is essential for maintaining the health and functionality of ecosystems, supporting human well-being,
+            and preserving the natural heritage of our planet. By addressing the challenges and implementing effective conservation strategies, we can 
+            ensure the continued existence of diverse species and ecosystems for future generations.</p>
+
+      
+    </div>
+</div>
+
+
+
+
+
+<div class="bgimg-2">
+    <a href="#aboutmain" >
+        <button class="button1"><b>Go Up</b></button></a>
+    <div class="caption">
+
+        
+    </div>
+</div>
+
+<script>
+    // Intersection Observer to trigger the progress bar animation
+    const progressBar = document.querySelector('.progress-bar');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                progressBar.style.animationPlayState = 'running';
+            } else {
+                progressBar.style.animationPlayState = 'paused';
+            }
+        });
+    });
+
+    observer.observe(document.querySelector('.bgimg-3'));
+</script>
+
+</body>
+</html>

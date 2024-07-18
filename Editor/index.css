@@ -1,0 +1,118 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(pastel-blue-vignette-concrete-textured-background.jpg);
+    font-size: large;
+    color: black;
+}
+
+/* Header Styles */
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent to differentiate from content */
+    transition: 0.5s ease;
+}
+
+/* Navigation Styles */
+.navigation {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-items a {
+    text-decoration: none;
+    color: #fff9f9;
+    margin: 0 10px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.navigation-items a:hover {
+    background-color: #00b944;
+    transform: scale(1.1);
+    color: aqua;
+}
+
+.navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: rgb(6, 184, 255);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.navigation-items a:hover:before {
+    width: 100%;
+    background-color: #40abd2;
+}
+
+/* Active Link Styles */
+.nav_links a.active {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: yellowgreen;
+    text-underline-offset: 6px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    margin-top: 150px; /* Adjust to the height of your header to prevent overlap */
+}
+
+img.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 120px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paragraph {
+    margin: 0 auto;
+    max-width: 800px; /* Adjust to fit your design */
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Heading Styles */
+h1, h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.26);
+}
