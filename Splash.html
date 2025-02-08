@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="4; url= Home.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life On Land (Group B7)</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .splash-img {
+            max-width: 100%;
+            height: auto;
+        }
+        h2, p, th, td {
+            color: #fff;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .mission {
+            color: #ddd;
+            background-color: #274128;
+            padding: 50px;
+            text-align: justify;
+            font-family: Poppins, Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        table {
+            margin: 20px 0;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #fff;
+            text-align: center;
+        }
+        .circle-loader {
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            border-top: 5px solid transparent;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @media (max-width: 768px) {
+            .mission {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="splash-img" src="logo.png" alt="splash-screen-logo">
+    <h2>Our Mission</h2>
+    <div class="mission">
+        <p>Our mission is to protect, revitalize, and advance the sustainable management of land ecosystems. We promote sustainable forest practices, battle desertification, and reverse land deterioration through effective conservation techniques. Our purpose is centrally focused on halting biodiversity loss through education, community engagement, and innovative solutions. We hope to ensure a sustainable future for future generations by establishing a harmonious relationship between mankind and the natural environment.</p>
+    </div>
+    <h2>Our Team</h2>
+    
+    <div class="mission">
+    <table>
+        <tr>
+            <th>Full name</th>
+            <th>UOW Number</th>
+            <th>Student Number</th>
+        </tr>
+        <tr>
+            <td>Chiran Senarath</td>
+            <td>w2081928</td>
+            <td>Student 01</td>
+        </tr>
+        <tr>
+            <td>Damsara Liyanage</td>
+            <td>w2083081</td>
+            <td>Student 02</td>
+        </tr>
+        <tr>
+            <td>Devin Nanayakkara</td>
+            <td>w2081927</td>
+            <td>Student 03</td>
+        </tr>
+        <tr>
+            <td>Oshada Eranga</td>
+            <td>w2081933</td>
+            <td>Student 04</td>
+        </tr>
+    </table>
+    </div>
+    <div class="circle-loader"></div>
+</body>
+</html>
